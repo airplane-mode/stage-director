@@ -1,0 +1,11 @@
+{
+  "name": "stage-director",
+  "version": "0.0.1",
+  "description": "Simplified, sane, reducer/action/action-creator definition system for redux",
+  "main": "stage-director.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
