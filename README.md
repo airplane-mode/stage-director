@@ -161,6 +161,5 @@ The only additional step required to use async actions like this is applying the
 import { applyMiddleware, createStore } from "redux";
 import thunk from "redux-thunk";
 
-
 const store = createStore(account.reducer, {}, applyMiddleware(thunk));
 ```
