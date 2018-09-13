@@ -6,6 +6,10 @@ Stage Director is a tiny library (~100 lines of code) that simplifies redux deve
 
 Stage Director is currently in beta with a planned release in late 2018. We are currently using Stage Director in two projects, but there are other use cases that we have not explored (or debugged) yet. Please report any issues you might find, submit pull requests, and test thoroughly in development before using in any production environment.
 
+During the beta period the API should be considered unstable as it is under active development. If you depend on Stage Director in production during that time, you should install a specific version with:
+
+`npm install --save stage-director@<VERSION>`
+
 ## Motivation
 
 Redux is a great way of managing application state, but for many common use cases it requires a lot of plumbing: actions, action creators, and reducers, spread across multiple files, usually in multiple directories. 
