@@ -4,7 +4,7 @@ Stage Director is a tiny library (~100 lines of code) that simplifies redux deve
 
 ## ¡¡¡BETA NOTICE!!!
 
-Stage Director is currently in beta with a planned release in late 2018. We are currently using it concurrently in two projects, but there are undoubtedly other use cases that we have not explored (or debugged) yet. Please report any issues you might find, submit pull requests, and test thoroughly in development before using in any production environment.
+Stage Director is currently in beta with a planned release in late 2018. We are currently using Stage Director in two projects, but there are other use cases that we have not explored (or debugged) yet. Please report any issues you might find, submit pull requests, and test thoroughly in development before using in any production environment.
 
 ## Motivation
 
