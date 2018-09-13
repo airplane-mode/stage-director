@@ -20,7 +20,7 @@ Stage Director introduces the notion of "directors". These are files that define
 
 Here's a very simple director for managing account / login state:
 
-```
+```javascript
 import StageDirector from "stage-director";
 
 const account = new StageDirector("account", {
@@ -43,7 +43,7 @@ Let's look through what it gives us:
 
 First of all, `account.reducer` gives us a reducer that knows how to handle actions with `type === "account:login"` and `type === "account:logout"`. We can register these reducers directly with a store with something like:
 
-```
+```javascript
 import { createStore } from "redux"
 
 const store = createStore(account.reducer);
@@ -64,7 +64,7 @@ Notice that the action types are namespaced by director, in this case "account".
 
 There are some cases where you'll want to do more in your action creator than simply create an action with the appropriate type. For example, you may want to extract a few fields from an object and expose those in the action. Stage Director lets you do this easily:
 
-```
+```javascript
 import StageDirector from "stage-director";
 
 const account = new StageDirector("account", {
@@ -101,7 +101,7 @@ Stage Director has support for `redux-thunk` style asynchronous actions out of t
 
 Here's a simple async example:
 
-```
+```javascript
 import StageDirector from "stage-director";
 
 const account = new StageDirector("account", {
@@ -157,7 +157,7 @@ As always, the login action creator is available through `account.actions.login(
 
 The only additional step required to use async actions like this is applying the `redux-thunk` middleware when you create your store:
 
-``
+``javascript
 import { applyMiddleware, createStore } from "redux";
 import thunk from "redux-thunk";
 
