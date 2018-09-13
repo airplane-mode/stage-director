@@ -157,7 +157,7 @@ As always, the login action creator is available through `account.actions.login(
 
 The only additional step required to use async actions like this is applying the `redux-thunk` middleware when you create your store:
 
-``javascript
+```javascript
 import { applyMiddleware, createStore } from "redux";
 import thunk from "redux-thunk";
 
