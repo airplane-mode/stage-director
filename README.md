@@ -76,7 +76,7 @@ const account = (state = {}, action) => {
 export default account;
 ```
 
-With Stage Director, we can reduce all of this logic into a single file that's smaller and easier to read than the aforementioned reducer itself.
+With Stage Director, we can reduce all of this logic into a single file that's smaller and easier to read than the aforementioned reducer alone.
 
 ```javascript
 import StageDirector from "stage-director";
