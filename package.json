@@ -4,8 +4,7 @@
   "description": "Simplified, sane, reducer/action/action-creator definition system for redux",
   "main": "lib/stage-director.js",
   "scripts": {
-    "build": "babel src -d lib",
-    "postinstall": "npm run build",
+    "postinstall": "babel src -d lib",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "babel": {
