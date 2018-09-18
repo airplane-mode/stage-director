@@ -5,7 +5,7 @@
   "main": "lib/stage-director.js",
   "scripts": {
     "build": "babel src -d lib",
-    "preinstall": "npm run build",
+    "postinstall": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "babel": {
