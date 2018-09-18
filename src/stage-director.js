@@ -40,7 +40,7 @@ export default class StageDirector {
             type: makeKey(name, key)
           });
         } else if(definition.async) {
-          this.actions[key] = () => {
+          this.actions[key] = (payload = {}) => {
             return (dispatch) => {
               if(typeof(definition.reduce) === "function") {
                 definition.async((payload) => dispatch({
