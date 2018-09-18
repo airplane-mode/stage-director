@@ -46,7 +46,7 @@ export default class StageDirector {
                 definition.async((payload) => dispatch({
                   ...payload,
                   type: makeKey(name, key)
-                }));
+                }), payload, dispatch);
               } else {
                 const done = {};
                 Object.keys(definition.reduce).forEach(reduceKey => {
@@ -55,7 +55,7 @@ export default class StageDirector {
                     type: makeKey(name, key, reduceKey)
                   });
                 });
-                definition.async(done, payload);
+                definition.async(done, payload, dispatch);
               }
             };
           };
