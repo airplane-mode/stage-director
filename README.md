@@ -4,7 +4,11 @@ Stage Director is a tiny library (~100 lines of code) that simplifies redux deve
 
 ## ¡¡¡BETA NOTICE!!!
 
-Stage Director is currently in beta with a planned release in late 2018. We are currently using it concurrently in two projects, but there are undoubtedly other use cases that we have not explored (or debugged) yet. Please report any issues you might find, submit pull requests, and test thoroughly in development before using in any production environment.
+Stage Director is currently in beta with a planned release in late 2018. We are currently using Stage Director in two projects, but there are other use cases that we have not explored (or debugged) yet. Please report any issues you might find, submit pull requests, and test thoroughly in development before using in any production environment.
+
+During the beta period the API should be considered unstable as it is under active development. If you depend on Stage Director in production during that time, you should install a specific version with:
+
+`npm install --save stage-director@<VERSION>`
 
 ## Motivation
 
@@ -76,7 +80,7 @@ const account = (state = {}, action) => {
 export default account;
 ```
 
-With Stage Director, we can reduce all of this logic into a single file that's smaller and easier to read than the aforementioned reducer itself.
+With Stage Director, we can reduce all of this logic into a single file that's smaller and easier to read than the aforementioned reducer alone.
 
 ```javascript
 import StageDirector from "stage-director";
