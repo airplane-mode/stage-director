@@ -55,7 +55,7 @@ export default class StageDirector {
                     type: makeKey(name, key, reduceKey)
                   });
                 });
-                definition.async(done);
+                definition.async(done, payload);
               }
             };
           };
