@@ -41,12 +41,12 @@ export default class StageDirector {
           });
         } else if(definition.async) {
           this.actions[key] = (payload = {}) => {
-            return (dispatch) => {
+            return (dispatch, getState) => {
               if(typeof(definition.reduce) === "function") {
                 definition.async((payload) => dispatch({
                   ...payload,
                   type: makeKey(name, key)
-                }), payload, dispatch);
+                }), payload, dispatch, getState);
               } else {
                 const done = {};
                 Object.keys(definition.reduce).forEach(reduceKey => {
@@ -55,7 +55,7 @@ export default class StageDirector {
                     type: makeKey(name, key, reduceKey)
                   });
                 });
-                definition.async(done, payload, dispatch);
+                definition.async(done, payload, dispatch, getState);
               }
             };
           };
