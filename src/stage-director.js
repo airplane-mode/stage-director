@@ -93,7 +93,7 @@ export default class StageDirector {
     }
   }
 
-  static combine(directors) {
+  static combine(directors, customCombine = null) {
     const actions = {};
     const reducers = {};
     Object.keys(directors).forEach(key => {
@@ -102,7 +102,7 @@ export default class StageDirector {
     });
     return {
       actions,
-      reducer: combineReducers(reducers)
+      reducer: (customCombine || combineReducers)(reducers)
     };
   };
 };
