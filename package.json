@@ -1,6 +1,6 @@
 {
   "name": "stage-director",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Simplified, sane, reducer/action/action-creator definition system for redux",
   "main": "lib/stage-director.js",
   "scripts": {
