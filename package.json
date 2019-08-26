@@ -22,7 +22,6 @@
     "mocha": "^6.2.0"
   },
   "dependencies": {
-    "core-js": "^3.2.1",
     "redux": "^4.0.4"
   }
 }
