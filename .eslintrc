@@ -16,7 +16,8 @@
     "space-unary-ops": ["error", { "overrides": { "typeof": false } }],
     "arrow-body-style": "off",
     "comma-dangle": ["error", "never"],
-    "no-plusplus": "off"
+    "no-plusplus": "off",
+    "no-use-before-define": "off"
   }
 }
 

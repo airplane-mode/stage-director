@@ -8,7 +8,8 @@
     "lint": "eslint src && eslint test",
     "build": "npm run lint && babel src --out-dir lib",
     "prepare": "npm run build",
-    "test": "npm run build && mocha"
+    "test": "npm run build && mocha",
+    "docs": "docco src/stage-director.js -l linear"
   },
   "author": "@airshanemode and @justifyles",
   "license": "MIT",
@@ -16,6 +17,7 @@
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
+    "docco": "^0.8.0",
     "eslint": "^6.1.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
