@@ -4,7 +4,9 @@ const assert = require("assert");
 const StageDirector = require("../lib/stage-director").default;
 
 
-const director = new StageDirector("test", {
+const DIRECTOR_NAME = "test";
+
+const director = new StageDirector(DIRECTOR_NAME, {
   update: (state, { value }) => ({
     ...state,
     value
@@ -13,8 +15,12 @@ const director = new StageDirector("test", {
 
 
 describe("Stage Director", () => {
-  it("should produce an action when an action creator is called", () => {
-    const action = director.actions.update({ value: "initial" }, { value: "updated" });
+  it("should produce well-formed synchronous actions", () => {
+    const UPDATE_VALUE = "updated";
+
+    const action = director.actions.update({ value: UPDATE_VALUE });
     assert.ok(action);
+    assert.equal(action.value, UPDATE_VALUE);
+    assert.equal(action.type, `${DIRECTOR_NAME}:update`);
   });
 });
