@@ -1,0 +1,22 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "quotes": ["error", "double"],
+    "keyword-spacing": ["error", {
+      "overrides": {
+        "if": { "after": false },
+        "for": { "after": false },
+        "catch": { "after": false },
+        "switch": { "after": false },
+        "do": { "after": false },
+        "while": { "after": false }
+      }
+    }],
+    "arrow-parens": "off",
+    "space-unary-ops": ["error", { "overrides": { "typeof": false } }],
+    "arrow-body-style": "off",
+    "comma-dangle": ["error", "never"],
+    "no-plusplus": "off"
+  }
+}
+

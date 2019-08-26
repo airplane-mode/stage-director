@@ -11,7 +11,7 @@ export default class StageDirector {
         return `${namespace}${SEP}${actionName}${SEP}${subActionName}`;
       }
       return `${namespace}${SEP}${actionName}`;
-    }
+    };
     const getBaseKey = (key) => {
       const parts = key.split(SEP);
       return `${parts[0]}${SEP}${parts[1]}`;
@@ -43,15 +43,15 @@ export default class StageDirector {
           this.actions[key] = (payload = {}) => {
             return (dispatch, getState) => {
               if(typeof(definition.reduce) === "function") {
-                definition.async((payload) => dispatch({
-                  ...payload,
+                definition.async((innerPayload) => dispatch({
+                  ...innerPayload,
                   type: makeKey(name, key)
                 }), payload, dispatch, getState);
               } else {
                 const done = {};
                 Object.keys(definition.reduce).forEach(reduceKey => {
-                  done[reduceKey] = (payload) => dispatch({
-                    ...payload,
+                  done[reduceKey] = (innerPayload) => dispatch({
+                    ...innerPayload,
                     type: makeKey(name, key, reduceKey)
                   });
                 });
@@ -74,23 +74,23 @@ export default class StageDirector {
         if(baseType === makeKey(name, key)) {
           if(typeof(definition) === "function") {
             return definition(state, payload);
-          } else if(typeof(definition.reduce) === "function") {
-            return definition.reduce(state, payload);
-          } else {
-            const subreducerKeys = Object.keys(definition.reduce);
-            const subkey = getSubKey(payload.type);
-            if(!subkey) {
-              throw new Error(`Action ${payload.type} doesn't specify a subreducer, but should be one of: ${subreducerKeys.join(",")}`);
-            }
-            if(!definition.reduce[subkey]) {
-              throw new Error(`Action ${payload.type} has subkey ${subkey}, but should be one of: ${subreducerKeys.join(",")}`);
-            }
-            return definition.reduce[subkey](state, payload);
           }
+          if(typeof(definition.reduce) === "function") {
+            return definition.reduce(state, payload);
+          }
+          const subreducerKeys = Object.keys(definition.reduce);
+          const subkey = getSubKey(payload.type);
+          if(!subkey) {
+            throw new Error(`Action ${payload.type} doesn't specify a subreducer, but should be one of: ${subreducerKeys.join(",")}`);
+          }
+          if(!definition.reduce[subkey]) {
+            throw new Error(`Action ${payload.type} has subkey ${subkey}, but should be one of: ${subreducerKeys.join(",")}`);
+          }
+          return definition.reduce[subkey](state, payload);
         }
       }
       return state;
-    }
+    };
   }
 
   static combine(directors, customCombine = null) {
@@ -104,5 +104,5 @@ export default class StageDirector {
       actions,
       reducer: (customCombine || combineReducers)(reducers)
     };
-  };
-};
+  }
+}

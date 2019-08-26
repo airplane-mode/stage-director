@@ -5,9 +5,10 @@
   "main": "lib/stage-director.js",
   "scripts": {
     "clean": "rm -rf lib/*",
-    "build": "babel src --out-dir lib",
+    "lint": "eslint src && eslint test",
+    "build": "npm run lint && babel src --out-dir lib",
     "prepare": "npm run build",
-    "test": "mocha"
+    "test": "npm run build && mocha"
   },
   "author": "@airshanemode and @justifyles",
   "license": "MIT",
@@ -15,6 +16,9 @@
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
     "mocha": "^6.2.0"
   },
   "dependencies": {
