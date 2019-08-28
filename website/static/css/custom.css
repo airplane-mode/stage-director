@@ -17,6 +17,10 @@ h2.headerTitleWithLogo {
   padding-top: 3px;
 }
 
+code {
+  border-radius: 5px;
+}
+
 /** custom responsive **/
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
