@@ -2,12 +2,16 @@
   "docs": {
     "Usage Guide": [
       "getting-started",
+      "core-concepts",
       "project-organization",
       "action-conventions",
       "advanced-usage"
     ],
     "API": [
       "api"
+    ],
+    "Contributing": [
+
     ]
   },
   "docs-other": {

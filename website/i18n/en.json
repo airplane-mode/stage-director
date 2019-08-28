@@ -8,18 +8,17 @@
       "api": {
         "title": "API Documentation"
       },
-      "doc3": {
-        "title": "This is document number 3"
-      },
-      "doc4": {
-        "title": "Other Document"
-      },
-      "doc5": {
-        "title": "Fifth Document"
+      "core-concepts": {
+        "title": "Core Concepts",
+        "sidebar_label": "Core Concepts"
       },
       "getting-started": {
         "title": "Getting Started",
         "sidebar_label": "Getting Started"
+      },
+      "project-organization": {
+        "title": "Project Organization",
+        "sidebar_label": "Project Organization"
       }
     },
     "links": {
@@ -31,6 +30,7 @@
     "categories": {
       "Usage Guide": "Usage Guide",
       "API": "API",
+      "Contributing": "Contributing",
       "First Category": "First Category"
     }
   },

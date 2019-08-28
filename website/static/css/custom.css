@@ -1,4 +1,5 @@
-/* your custom css */
+
+/** custom styles **/
 
 div.post p a {
   font-weight: bold;
@@ -9,6 +10,14 @@ div.post p a:hover {
   color: #a92323;
   text-decoration: underline;
 }
+
+h2.headerTitleWithLogo {
+  font-weight: normal;
+  margin-left: 5px !important;
+  padding-top: 3px;
+}
+
+/** custom responsive **/
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
 }
