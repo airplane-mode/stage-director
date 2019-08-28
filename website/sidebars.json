@@ -1,0 +1,16 @@
+{
+  "docs": {
+    "Usage Guide": [
+      "getting-started",
+      "project-organization",
+      "action-conventions",
+      "advanced-usage"
+    ],
+    "API": [
+      "api"
+    ]
+  },
+  "docs-other": {
+    "First Category": ["doc4", "doc5"]
+  }
+}
