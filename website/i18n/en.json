@@ -5,6 +5,10 @@
     "previous": "Previous",
     "tagline": "Redux without all the bolierplate.",
     "docs": {
+      "alternatives": {
+        "title": "Alternative Solutions",
+        "sidebar_label": "Alternative Solutions"
+      },
       "api": {
         "title": "API Documentation"
       },
@@ -20,9 +24,25 @@
         "title": "Getting Started",
         "sidebar_label": "Getting Started"
       },
+      "immer": {
+        "title": "Using with Immer",
+        "sidebar_label": "Using with Immer"
+      },
       "project-organization": {
         "title": "Project Organization",
         "sidebar_label": "Project Organization"
+      },
+      "sharing-logic": {
+        "title": "Sharing Action Logic",
+        "sidebar_label": "Sharing Action Logic"
+      },
+      "transforming-payloads": {
+        "title": "Transforming Payloads",
+        "sidebar_label": "Transforming Payloads"
+      },
+      "validation-and-errors": {
+        "title": "Validation and Error Handling",
+        "sidebar_label": "Validation and Error Handling"
       }
     },
     "links": {

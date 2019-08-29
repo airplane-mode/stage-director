@@ -6,9 +6,10 @@
       "project-organization",
       "action-types",
       "async",
-      "transforming",
+      "transforming-payloads",
       "sharing-logic",
       "validation-and-errors",
+      "immer",
       "alternatives"
     ],
     "API": [
