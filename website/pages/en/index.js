@@ -13,6 +13,55 @@ const MarkdownBlock = CompLibrary.MarkdownBlock; /* Used to read markdown */
 const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
 
+const SCRIPT_START = "```javascript";
+const SCRIPT_END = "```";
+
+const EXAMPLES = {
+  STAGE_DIRECTOR: `
+${SCRIPT_START}
+import StageDirector from "stage-director";
+
+export default new StageDirector("my-app", {
+  updateMessage: (state, { message }) => ({
+    ...state,
+    message
+  });
+});
+${SCRIPT_END}
+  `,
+  VANILLA_REDUX: `
+${SCRIPT_START},
+// src/action-types/my-app.js
+const UPDATE_MESSAGE = "UPDATE_MESSAGE";
+
+// src/action-creators/my-app.js
+import { UPDATE_MESSAGE } from "../action-types/my-app";
+
+export default function updateMessage(message) {
+  return {
+    type: UPDATE_MESSAGE,
+    message
+  };
+}
+
+// src/reducers/my-app.js
+import { UPDATE_MESSAGE } from "../action-types/my-app";
+
+export function myApp(state, action) {
+  switch(action.type) {
+    case UPDATE_MESSAGE:
+      return ({
+        ...state,
+        message: action.message
+      });
+    default:
+      return state;
+  }
+}
+
+`
+};
+
 class HomeSplash extends React.Component {
   render() {
     const {siteConfig, language = ''} = this.props;
@@ -143,6 +192,23 @@ class Index extends React.Component {
       </Block>
     );
 
+    const Comparison = () => (
+      <div className="comparison">
+        <div className="example">
+          <h3> Stage Director </h3>
+          <MarkdownBlock>
+            { EXAMPLES.STAGE_DIRECTOR }
+          </MarkdownBlock>
+        </div>
+        <div className="example">
+          <h3> Vanilla Redux </h3>
+          <MarkdownBlock>
+            { EXAMPLES.VANILLA_REDUX }
+          </MarkdownBlock>
+        </div>
+      </div>
+    );
+
     const Features = () => (
       <Block layout="fourColumn">
         {[
@@ -195,7 +261,7 @@ class Index extends React.Component {
       <div>
         <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer">
-          <Features />
+          <Comparison />
           <FeatureCallout />
           <LearnHow />
           <TryOut />
