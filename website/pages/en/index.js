@@ -58,6 +58,7 @@ export function myApp(state, action) {
       return state;
   }
 }
+${SCRIPT_END}
 
 `
 };

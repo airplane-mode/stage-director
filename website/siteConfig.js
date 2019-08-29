@@ -22,7 +22,7 @@ const users = [
 
 const siteConfig = {
   title: 'Stage Director', // Title for your website.
-  tagline: "Redux without all the bolierplate.",
+  tagline: "Redux without all the boilerplate.",
   url: 'https://your-docusaurus-test-site.com', // Your website URL
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
@@ -54,7 +54,7 @@ const siteConfig = {
 
   /* Colors for website */
   colors: {
-    primaryColor: '#333',
+    primaryColor: '#2d2d2d',
     secondaryColor: '#f67a33',
   },
 
@@ -105,6 +105,10 @@ const siteConfig = {
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
   //   repoUrl: 'https://github.com/facebook/test-site',
+
+  stylesheets: [
+    "https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap"
+  ]
 };
 
 module.exports = siteConfig;

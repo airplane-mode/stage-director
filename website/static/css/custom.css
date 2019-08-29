@@ -13,8 +13,18 @@ div.post p a:hover {
 
 h2.headerTitleWithLogo {
   font-weight: normal;
+  font-family: "Permanent Marker";
   margin-left: 5px !important;
-  padding-top: 3px;
+  margin-top: -4px !important;
+}
+
+h2.projectTitle {
+  font-family: "Permanent Marker";
+}
+
+h2.projectTitle small {
+  font-family: sans;
+  font-size: 20px;
 }
 
 code {
@@ -30,6 +40,11 @@ div.comparison {
 div.comparison .example {
   width: 520px;
 }
+
+.homeContainer {
+  padding-top: 40px;
+}
+
 
 /** custom responsive **/
 
