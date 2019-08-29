@@ -157,7 +157,7 @@ class Index extends React.Component {
         <div className="featureBlock">
           <h3> Compatible </h3>
           <p>
-            Stage Director generates standard redux actions and reducers so it works with all existing libraries, middleware, and debugging tools. Get all of the benefits of redux with all of the cruft.
+            Stage Director generates standard redux actions and reducers so it works with all existing libraries, middleware, and debugging tools. Get all of the benefits of redux without all of the cruft.
           </p>
         </div>
       </div>
