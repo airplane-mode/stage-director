@@ -114,7 +114,7 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
-            <Button href="#try">Get Started</Button>
+            <Button href="/docs/getting-started">Get Started</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -143,21 +143,33 @@ class Index extends React.Component {
     const FeatureCallout = () => (
       <div className="productShowcaseSection paddingBottom">
         <div className="featureBlock">
-          <h3> Organized </h3>
+          <h3> Simplified </h3>
           <p>
-            Lorem ipsum dolor sit amet, something something, logical units are organized somehow something.
+            Stage Director handles the complexity of creating action types, action creators, and reducers for you so you can focus on your application logic instead of redux's framework logic.
+            <br/><br/>
+            <a className="learn" href="/docs/core-concepts">
+              Learn The Core Concepts
+            </a>
           </p>
         </div>
         <div className="featureBlock">
           <h3> Asynchronous </h3>
           <p>
-            Working async actions out of the box with a massively simplified workflow for defining async actions and handling their responses.
+            Working async actions out of the box with a massively simplified workflow for defining async actions and handling their responses. Built-in error handling is the cherry on top.
+            <br/><br/>
+            <a className="learn" href="/docs/async">
+              Learn About Async
+            </a>
           </p>
         </div>
         <div className="featureBlock">
           <h3> Compatible </h3>
           <p>
             Stage Director generates standard redux actions and reducers so it works with all existing libraries, middleware, and debugging tools. Get all of the benefits of redux without all of the cruft.
+          <br/><br/>
+          <a className="learn" href="/docs/getting-started">
+            Learn How to Integrate it
+          </a>
           </p>
         </div>
       </div>
@@ -278,10 +290,6 @@ class Index extends React.Component {
         <div className="mainContainer">
           <Comparison />
           <FeatureCallout />
-          <LearnHow />
-          <TryOut />
-          <Description />
-          <Showcase />
         </div>
       </div>
     );

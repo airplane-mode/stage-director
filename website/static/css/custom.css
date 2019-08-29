@@ -1,12 +1,12 @@
 
 /** custom styles **/
 
-div.post p a {
+div.post p a, a.learn {
   font-weight: bold;
   color: #a92323;
 }
 
-div.post p a:hover {
+div.post p a:hover, a.learn:hover {
   color: #a92323;
   text-decoration: underline;
 }
@@ -55,6 +55,19 @@ div.comparison .example {
 .productShowcaseSection .featureBlock {
   text-align: left;
   width: 300px;
+}
+
+.productShowcaseSection .featureBlock p {
+  padding-top: 0;
+}
+
+.promoSection {
+  margin-top: 60px;
+}
+
+.promoSection a.button {
+  font-size: 18px;
+  text-transform: none;
 }
 
 
