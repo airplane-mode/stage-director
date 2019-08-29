@@ -8,6 +8,10 @@
       "api": {
         "title": "API Documentation"
       },
+      "async": {
+        "title": "Async Actions",
+        "sidebar_label": "Async Actions"
+      },
       "core-concepts": {
         "title": "Core Concepts",
         "sidebar_label": "Core Concepts"

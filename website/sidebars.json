@@ -4,8 +4,12 @@
       "getting-started",
       "core-concepts",
       "project-organization",
-      "action-conventions",
-      "advanced-usage"
+      "action-types",
+      "async",
+      "transforming",
+      "sharing-logic",
+      "validation-and-errors",
+      "alternatives"
     ],
     "API": [
       "api"
