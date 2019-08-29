@@ -45,6 +45,18 @@ div.comparison .example {
   padding-top: 40px;
 }
 
+.productShowcaseSection {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.productShowcaseSection .featureBlock {
+  text-align: left;
+  width: 300px;
+}
+
 
 /** custom responsive **/
 

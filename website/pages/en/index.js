@@ -141,11 +141,25 @@ class Index extends React.Component {
     );
 
     const FeatureCallout = () => (
-      <div
-        className="productShowcaseSection paddingBottom"
-        style={{textAlign: 'center'}}>
-        <h2>Feature Callout</h2>
-        <MarkdownBlock>These are features of this project</MarkdownBlock>
+      <div className="productShowcaseSection paddingBottom">
+        <div className="featureBlock">
+          <h3> Organized </h3>
+          <p>
+            Lorem ipsum dolor sit amet, something something, logical units are organized somehow something.
+          </p>
+        </div>
+        <div className="featureBlock">
+          <h3> Asynchronous </h3>
+          <p>
+            Working async actions out of the box with a massively simplified workflow for defining async actions and handling their responses.
+          </p>
+        </div>
+        <div className="featureBlock">
+          <h3> Compatible </h3>
+          <p>
+            Stage Director generates standard redux actions and reducers so it works with all existing libraries, middleware, and debugging tools. Get all of the benefits of redux with all of the cruft.
+          </p>
+        </div>
       </div>
     );
 
