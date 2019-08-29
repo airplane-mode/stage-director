@@ -16,10 +16,8 @@
       "api"
     ],
     "Contributing": [
-
+      "developing",
+      "documenting"
     ]
-  },
-  "docs-other": {
-    "First Category": ["doc4", "doc5"]
   }
 }

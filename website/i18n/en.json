@@ -3,14 +3,14 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "Redux without all the bolierplate.",
+    "tagline": "Redux without all the boilerplate.",
     "docs": {
       "alternatives": {
         "title": "Alternative Solutions",
         "sidebar_label": "Alternative Solutions"
       },
       "api": {
-        "title": "API Documentation"
+        "title": "API Reference"
       },
       "async": {
         "title": "Async Actions",
@@ -19,6 +19,14 @@
       "core-concepts": {
         "title": "Core Concepts",
         "sidebar_label": "Core Concepts"
+      },
+      "developing": {
+        "title": "Developing Stage Director",
+        "sidebar_label": "Developing Stage Director"
+      },
+      "documenting": {
+        "title": "Contributing Documentation",
+        "sidebar_label": "Contributing Documentation"
       },
       "getting-started": {
         "title": "Getting Started",
@@ -54,8 +62,7 @@
     "categories": {
       "Usage Guide": "Usage Guide",
       "API": "API",
-      "Contributing": "Contributing",
-      "First Category": "First Category"
+      "Contributing": "Contributing"
     }
   },
   "pages-strings": {

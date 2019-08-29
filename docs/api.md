@@ -1,6 +1,7 @@
 ---
 id: api
-title: API Documentation
+title: API Reference
+sidebar_title: API Reference
 ---
 
 This is a link to [another document.](doc3.md)  
