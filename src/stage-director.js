@@ -162,8 +162,8 @@ export default class StageDirector {
   // combination of multiple directors into a combined reducer that can be directly
   // installed into a redux store.
   //
-  // The `directors` argument is a list of stage directors to combine. By default,
-  // the standard `combineReducers` function from reducx is used, but if an alternative
+  // The `directors` argument is a name->director dictionary of directors to combine. By default,
+  // the standard `combineReducers` function from redux is used, but if an alternative
   // combine function is desired, it can be passed with the `customCombine` parameter.
   static combine(directors, customCombine = null) {
     const actions = {};
@@ -176,7 +176,7 @@ export default class StageDirector {
     // combined reducers. This means that if you're only interested in the reducers,
     // which is often the case, you can get them by destructuring the return value:
     //
-    // `const { rootReducer } = StageDirector.combine([director1, director2, director3]);`
+    // `const { rootReducer } = StageDirector.combine({ director1, director2, director3 });`
     return {
       actions,
       reducer: (customCombine || combineReducers)(reducers)

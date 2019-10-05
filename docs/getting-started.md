@@ -74,4 +74,4 @@ store.dispatch(myFirstDirector.actions.update({ message: "Hello, world!" }));
 
 ## Next Steps
 
-From here you can learn more about Stage Director's [core concepts](core-concepts.md), start learning how to use it's [advanced features](advanced-usage.md), such as async, or dig into the [API docs](api.md) directly.
+From here you can learn more about Stage Director's [core concepts](core-concepts.md), start learning how to use it's [async support](async.md), or dig into the [API docs](api.md) directly.
